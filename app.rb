@@ -14,7 +14,7 @@ post '/gateway' do
     resp = JSON.parse resp.body
     respond_message "There are #{resp['open_issues_count']} open issues on #{repo}"
   else
-    respond_message "I don't understand"
+    respond_message "I don't understand: \"#{message}\""
   end
 end
 
